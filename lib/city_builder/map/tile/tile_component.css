@@ -1,0 +1,23 @@
+:host {
+    display: black;
+    box-sizing: border-box;
+    background-size: contain;
+    position: absolute;
+    transition: box-shadow 0.5s;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+:host(.picked) {
+    box-shadow: inset 1px 1px 10px 3px rgba(255, 255, 0, 1), 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    border: 2px solid yellow;
+    pointer-events: none;
+}
+
+.place-holder {
+    cursor: pointer;
+}
+
+.place-container {
+    height: 150%;
+}

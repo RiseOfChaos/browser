@@ -1,0 +1,24 @@
+:host {
+    display: block;
+    width: 1000px;
+    height: 1000px;
+}
+
+.viewport {
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    transform: rotateX(60deg) rotateZ(-45deg) scale(1.2);
+    position: relative;
+}
+
+.tile {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tile:hover {
+    background-color: green;
+}

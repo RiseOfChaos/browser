@@ -1,0 +1,5 @@
+<div class="viewport" (click)="clicked($event)">
+    <template ngFor let-tile [ngForOf]="tiles">
+        <div class="tile" [style.left.px]="tile.x * 64" [style.top.px]="tile.y * 64" [style.background-color]="tile.color"></div>
+    </template>
+</div>
