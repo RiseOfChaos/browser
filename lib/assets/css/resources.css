@@ -1,0 +1,19 @@
+.roc-res-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+
+.roc-res-icon.Adamantium {
+    background-image: url(/packages/browser/assets/img/res/adamantium_small.png);
+}
+
+.roc-res-icon.Magnetite {
+    background-image: url(/packages/browser/assets/img/res/magnetite_small.png);
+}
+
+.roc-res-icon.Uranium {
+    background-image: url(/packages/browser/assets/img/res/uranium_small.png);
+}
