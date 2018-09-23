@@ -1,0 +1,7 @@
+<div class="holder">
+    <city-map [city]="city"
+              (selectionChanged)="handleSelectionChange($event)"></city-map>
+    <template [ngIf]="showingBuildingList">
+        <building-list></building-list>
+    </template>
+</div>

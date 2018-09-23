@@ -1,6 +1,4 @@
-import 'package:data/data.dart';
-
-import 'city.dart';
+part of 'city.dart';
 
 abstract class CityTile {
   City city;
@@ -12,6 +10,10 @@ abstract class CityTile {
   int get pos => (y * ICity.numCols) + x;
 
   CityTile({this.city, this.x, this.y});
+
+  bool get isBuilding => false;
+
+  bool get isResource => false;
 }
 
 class EmptyCityTile extends CityTile {
@@ -32,6 +34,10 @@ class CityResourceTile extends CityTile {
   }
 
   String toString() => "CityRes(x: $x, y: $y, type: ${info.name})";
+
+  bool get isBuilding => false;
+
+  bool get isResource => true;
 }
 
 class CityBuildingTile extends CityTile {
@@ -51,4 +57,8 @@ class CityBuildingTile extends CityTile {
   }
 
   String toString() => "CitySlot(x: $x, y: $y)";
+
+  bool get isBuilding => true;
+
+  bool get isResource => false;
 }

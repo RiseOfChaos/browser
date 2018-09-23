@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+city-map {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+building-list {
+    position: absolute;
+    bottom: 0px;
+}

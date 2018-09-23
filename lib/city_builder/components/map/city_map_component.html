@@ -1,6 +1,12 @@
 <div #viewport class="viewport" (click)="clicked($event)" (wheel)="wheeled($event)"
      [style.width.px]="10 * size.x" [style.height.px]="10 * size.y">
-    <template ngFor let-tile [ngForOf]="tiles">
+    <template ngFor let-tile [ngForOf]="city.tiles.values">
+        <div class="tile" [style.left.px]="tile.x * size.x"
+             [style.top.px]="tile.y * size.y"
+             [style.width.px]="size.x"
+             [style.height.px]="size.y"></div>
+    </template>
+    <template ngFor let-tile [ngForOf]="buildings">
         <div class="tile" [style.left.px]="tile.x * size.x"
              [style.top.px]="tile.y * size.y"
              [style.width.px]="size.x"

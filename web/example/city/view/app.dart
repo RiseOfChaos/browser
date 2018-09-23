@@ -1,14 +1,15 @@
 import 'package:angular/angular.dart';
-import 'package:browser/city_builder/map/city_map/city_map_component.dart';
+import 'package:browser/city_builder/components/city_view/city_view_component.dart';
 
 import 'package:data/city_tiles/building.dart';
+import 'package:browser/city_builder/models/city.dart';
 
 @Component(
     selector: 'my-app',
     // styleUrls: ['app_component.css'],
-    directives: [CityMapComponent],
+    directives: [CityViewComponent],
     template: """
-<city-map></city-map>
+<city-view [city]='city'></city-view>
   """,
   styles: ["""
 :host {
@@ -19,4 +20,5 @@ import 'package:data/city_tiles/building.dart';
   """],
 )
 class AppComponent {
+  City city = City();
 }

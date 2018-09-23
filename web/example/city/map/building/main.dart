@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:browser/city_builder/map/tile/tile_component.dart';
+import 'package:browser/city_builder/components/map/tile/tile_component.dart';
 import 'main.template.dart' as ng;
 
 import 'package:data/city_tiles/building.dart';

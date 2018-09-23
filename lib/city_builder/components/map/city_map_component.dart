@@ -1,12 +1,12 @@
 import 'dart:html';
 import 'dart:math';
+import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:data/city_tiles/building.dart';
 
 import 'package:data/city/city.dart';
 
 import 'package:browser/city_builder/models/city.dart';
-import 'package:browser/city_builder/models/tile.dart';
 
 @Component(
   selector: 'city-map',
@@ -24,7 +24,7 @@ class CityMapComponent {
   int sizeIndex = 2;
   Point<int> get size => sizes[sizeIndex];
 
-  List<CityResourceTile> resources = [];
+  List<CityTile> resources = [];
   List<CityBuildingTile> buildings = [];
 
   void clicked(MouseEvent event) {
@@ -41,7 +41,16 @@ class CityMapComponent {
   @ViewChild('viewport')
   DivElement viewportDiv;
 
-  CityTile selected;
+  final _selectedEmitter = new StreamController<CityTile>();
+  @Output()
+  get selectionChanged => _selectedEmitter.stream;
+
+  CityTile _selected;
+  CityTile get selected => _selected;
+  set selected(CityTile value) {
+    _selected = value;
+    _selectedEmitter.add(_selected);
+  }
 
   void wheeled(WheelEvent event) {
     if (event.deltaY < 0) {

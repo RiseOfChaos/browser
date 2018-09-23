@@ -1,5 +1,6 @@
 import 'package:data/data.dart';
-import 'tile.dart';
+
+part 'tile.dart';
 
 class ResourceCounter {
   Resources _lastValue;
@@ -26,7 +27,7 @@ class City {
   // TODO DateTime version;
 
   /// Map of position to city tile.
-  Map<String, CityTile> tilesMap;
+  Map<String, CityTile> tiles = {};
 
   final _resourceCounter = ResourceCounter();
 
