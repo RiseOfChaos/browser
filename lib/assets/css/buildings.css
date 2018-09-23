@@ -1,3 +1,63 @@
+.City-center {
+    background-image: url(/packages/browser/assets/img/buildings/citycenter.png);
+}
+
+.Quarry {
+    background-image: url(/packages/browser/assets/img/buildings/quarry.png);
+}
+
+.Ironworks {
+    background-image: url(/packages/browser/assets/img/buildings/ironworks.png);
+}
+
+.House {
+    background-image: url(/packages/browser/assets/img/buildings/house.png);
+}
+
+.Warehouse {
+    background-image: url(/packages/browser/assets/img/buildings/warehouse.png);
+}
+
+.Smithery {
+    background-image: url(/packages/browser/assets/img/buildings/smithery.png);
+}
+
+.Mongery {
+    background-image: url(/packages/browser/assets/img/buildings/mongery.png);
+}
+
+.Uranium-mine {
+    background-image: url(/packages/browser/assets/img/buildings/uranium_mine.png);
+}
+
+.Enrichment-plant {
+    background-image: url(/packages/browser/assets/img/buildings/enrichment_plant.png);
+}
+
 .Barrack {
     background-image: url(/packages/browser/assets/img/buildings/barrack.png);
+}
+
+.Plasma-range {
+    background-image: url(/packages/browser/assets/img/buildings/plasma_range.png);
+}
+
+.Battery {
+    background-image: url(/packages/browser/assets/img/buildings/battery.png);
+}
+
+.Artillery-yard {
+    background-image: url(/packages/browser/assets/img/buildings/artillery_yard.png);
+}
+
+.Airbase {
+    background-image: url(/packages/browser/assets/img/buildings/airbase.png);
+}
+
+.Academy {
+    background-image: url(/packages/browser/assets/img/buildings/academy.png);
+}
+
+.Command-center {
+    background-image: url(/packages/browser/assets/img/buildings/command_center.png);
 }

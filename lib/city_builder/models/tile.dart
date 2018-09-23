@@ -46,7 +46,5 @@ class CityBuildingTile extends CityTile {
     this.level = level;
   }
 
-  String get imageUrl => info.info.imageUrl;
-
   String toString() => "CitySlot(x: $x, y: $y)";
 }

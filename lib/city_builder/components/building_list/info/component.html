@@ -1,0 +1,17 @@
+<div class="holder" layout vertical>
+    <div layout horizontal center justify-between>
+        <div class="name">{{item.info.name}}</div>
+        <div layout horizontal center>
+            <div class="cost-holder" layout horizontal center>
+                <div class="cost-icon Adamantium"></div>
+                <div class="cost-amount">{{item.cost[0].adamantium}}</div>
+            </div>
+            <div class="cost-holder" layout horizontal center>
+                <div class="cost-icon Magnetite"></div>
+                <div class="cost-amount">{{item.cost[0].magnetite}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="description">{{item.info.description}}</div>
+    <!-- TODO Cost -->
+</div>

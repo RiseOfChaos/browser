@@ -3,14 +3,22 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    width: 100px;
+    cursor: pointer;
 }
 
 .holder {
-    width: 90px;
+    width: 100px;
 }
 
 .image {
     width: 64px;
     height: 64px;
     background-size: 64px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:host:hover .label {
+    color: aquamarine;
 }

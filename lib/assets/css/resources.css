@@ -6,14 +6,14 @@
     height: 30px;
 }
 
-.roc-res-icon.Adamantium {
+.Adamantium {
     background-image: url(/packages/browser/assets/img/res/adamantium_small.png);
 }
 
-.roc-res-icon.Magnetite {
+.Magnetite {
     background-image: url(/packages/browser/assets/img/res/magnetite_small.png);
 }
 
-.roc-res-icon.Uranium {
+.Uranium {
     background-image: url(/packages/browser/assets/img/res/uranium_small.png);
 }
