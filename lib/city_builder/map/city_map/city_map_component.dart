@@ -5,31 +5,8 @@ import 'package:data/city_tiles/building.dart';
 
 import 'package:data/city/city.dart';
 
-class Iso {
-  static Point<int> fromOrtho(Point<num> ortho, Point<num> size) {
-    int x = (ortho.x - ortho.y) * (size.x ~/ 2);
-    int y = (ortho.x + ortho.y) * (size.y ~/ 4);
-    return Point<int>(x, y);
-  }
-
-  static Point<int> toOrtho(Point<num> iso, Point<num> size) {
-    int x = (iso.x / (size.x / 2) + iso.y / (size.y / 2)) ~/ 2;
-    int y = (iso.y / (size.y / 2) - iso.x / (size.x / 2)) ~/ 2;
-    return Point<int>(x, y);
-  }
-}
-
-class Tile {
-  int x;
-
-  int y;
-
-  String get color => 'blue';
-
-  Tile({this.x: 0, this.y: 0});
-}
-
-Point<int> size = Point<int>(64, 64);
+import 'package:browser/city_builder/models/city.dart';
+import 'package:browser/city_builder/models/tile.dart';
 
 @Component(
   selector: 'city-map',
@@ -41,14 +18,19 @@ Point<int> size = Point<int>(64, 64);
   ],
 )
 class CityMapComponent {
+  @Input()
+  City city;
+
   int sizeIndex = 2;
   Point<int> get size => sizes[sizeIndex];
 
-  List<Tile> tiles = [];
+  List<CityResourceTile> resources = [];
+  List<CityBuildingTile> buildings = [];
 
   void clicked(MouseEvent event) {
     if (event.target == viewportDiv) {
-      selected = Tile(x: event.offset.x ~/ size.x, y: event.offset.y ~/ size.y);
+      selected = EmptyCityTile(
+          city: city, x: event.offset.x ~/ size.x, y: event.offset.y ~/ size.y);
     }
   }
 
@@ -59,15 +41,19 @@ class CityMapComponent {
   @ViewChild('viewport')
   DivElement viewportDiv;
 
-  Tile selected;
+  CityTile selected;
 
   void wheeled(WheelEvent event) {
     if (event.deltaY < 0) {
-      if(sizeIndex < sizes.length - 1) sizeIndex++;
-      else sizeIndex = sizes.length - 1;
+      if (sizeIndex < sizes.length - 1)
+        sizeIndex++;
+      else
+        sizeIndex = sizes.length - 1;
     } else {
-      if(sizeIndex > 0) sizeIndex--;
-      else sizeIndex = 0;
+      if (sizeIndex > 0)
+        sizeIndex--;
+      else
+        sizeIndex = 0;
     }
   }
 }

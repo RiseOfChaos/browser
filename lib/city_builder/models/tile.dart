@@ -14,6 +14,10 @@ abstract class CityTile {
   CityTile({this.city, this.x, this.y});
 }
 
+class EmptyCityTile extends CityTile {
+  EmptyCityTile({City city, int x, int y}) : super(city: city, x: x, y: y);
+}
+
 class CityResourceTile extends CityTile {
   CityResourceTileInfo info;
 
