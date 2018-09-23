@@ -1,5 +1,14 @@
-<div class="viewport" (click)="clicked($event)">
+<div #viewport class="viewport" (click)="clicked($event)" (wheel)="wheeled($event)"
+     [style.width.px]="10 * size.x" [style.height.px]="10 * size.y">
     <template ngFor let-tile [ngForOf]="tiles">
-        <div class="tile" [style.left.px]="tile.x * 64" [style.top.px]="tile.y * 64" [style.background-color]="tile.color"></div>
+        <div class="tile" [style.left.px]="tile.x * size.x"
+             [style.top.px]="tile.y * size.y"
+             [style.width.px]="size.x"
+             [style.height.px]="size.y"></div>
     </template>
+    <div *ngIf="selected != null" class="active-tile"
+        [style.left.px]="selected.x * size.x"
+        [style.top.px]="selected.y * size.y"
+        [style.width.px]="size.x" [style.height.px]="size.y"
+        (click)="selectedClicked($event)"></div>
 </div>

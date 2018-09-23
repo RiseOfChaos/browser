@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    background: #616160;
+    width: 200px;
+    overflow-y: auto;
+}
+
+.tabs {
+    background: #484848;
+}
+
+.tab {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #cecece;
+    border-bottom: 2px solid #9a9a9a;
+    cursor: pointer;
+}
+
+.tab.selected {
+    color: white;
+    cursor: default;
+}

@@ -1,5 +1,5 @@
-<div layout vertical class="holder">
-  <div class="info-max-rate" layout horizontal center-center>
+<div class="holder" layout vertical end>
+  <div class="decorated-label" layout horizontal center-center>
     <div class="label-max">Max</div>
     <div flex>{{max}}</div>
     <div class="info-rate">{{rate}}/h</div>
@@ -13,7 +13,7 @@
            -->
       <div class="progress" [ngClass]="info.name"
            [style.width.%]="progress"></div>
-      <div class="info-amount">{{amount}}</div>
+      <div class="info-amount decorated-label">{{amount}}</div>
       <div class="progress-highlight"></div>
     </div>
     <div class="roc-res-icon res-icon"

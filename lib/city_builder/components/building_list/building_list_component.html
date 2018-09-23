@@ -1,0 +1,14 @@
+<div class="tabs" layout horizontal>
+    <div class="tab" [class.selected]="selected == 0" (click)="selected = 0">Resource</div>
+    <div class="tab" [class.selected]="selected == 1" (click)="selected = 1">Military</div>
+</div>
+<div *ngIf="selected == 0">
+    <template ngFor let-item [ngForOf]="resource">
+        <building-list-item [item]='item'></building-list-item>
+    </template>
+</div>
+<div *ngIf="selected == 1">
+    <template ngFor let-item [ngForOf]="military">
+        <building-list-item [item]='item'></building-list-item>
+    </template>
+</div>

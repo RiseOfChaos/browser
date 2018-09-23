@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.holder {
+    width: 90px;
+}
+
+.image {
+    width: 64px;
+    height: 64px;
+    background-size: 64px;
+}
