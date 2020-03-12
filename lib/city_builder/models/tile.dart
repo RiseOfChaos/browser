@@ -7,7 +7,7 @@ abstract class CityTile {
 
   int y;
 
-  int get pos => (y * ICity.numCols) + x;
+  int get pos => (y * C.numCols) + x;
 
   CityTile({this.city, this.x, this.y});
 
